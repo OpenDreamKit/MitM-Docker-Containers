@@ -2,23 +2,26 @@ version: '3.6'
 
 services:
   gap:
-    context: gap
+    build: ./gap
     ports:
       - "26133:26133"
   
   mmt:
-    context: mmt
+    build: ./mmt
     volumes:
       - mmt:/content/
     ports:
       - "26134:26134"
   
   singular:
-    context: singular
+    build: ./singular
     ports:
       - "26135:26135"
   
   sage:
-    context: mmt
+    build: ./sage
     ports:
       - "26136:26133"
+
+volumes:
+  mmt:

@@ -8,4 +8,4 @@ EXPOSE 26133
 
 # Add the script to start the server
 ADD scscp.g /home/gap/scscp.g
-CMD ["/bin/bash", "-c", "$GAP_HOME/bin/gap.sh /home/gap/scscp.g"]
+CMD ["/bin/bash", "-c", "$GAP_HOME/bin/gap.sh -A /home/gap/scscp.g"]
