@@ -6,7 +6,7 @@ RUN sudo apt-get update && sudo apt-get install -y git
 # copy over
 RUN git clone https://github.com/OpenDreamKit/MitM-Sage && \
     sage -pip install -e MitM-Sage/sage/ --process-dependency-links --upgrade && \
-    sage -pip install --upgrade git+https://github.com/OpenMath/py-openmath@odk-mitm-helpers && \
+    sage -pip install --upgrade git+https://github.com/OpenMath/py-openmath && \
     sage -pip install --upgrade git+https://github.com/OpenMath/py-scscp
 
 EXPOSE 26133

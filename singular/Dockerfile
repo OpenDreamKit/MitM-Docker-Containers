@@ -9,7 +9,10 @@ RUN apt-get update \
         libsingular4-dev \
         pkg-config \
         singular \
-    && pip3 install openmath scscp pysingular termcolor
+    && \
+    pip3 install pysingular termcolor && \
+    pip3 install --upgrade git+https://github.com/OpenMath/py-openmath && \
+    pip3 install --upgrade git+https://github.com/OpenMath/py-scscp
 
 # Put the repo into /app/
 RUN git clone https://github.com/OpenDreamKit/MitM-Singular /app/
