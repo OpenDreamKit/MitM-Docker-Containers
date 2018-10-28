@@ -1,0 +1,17 @@
+// turn on all the logging
+log console
+log+ lmfdb
+log+ mitm
+log+ scscp
+
+// Load archives
+mathpath archive /content/
+
+// Load extensions
+extension info.kwarc.mmt.api.ontology.AlignmentsServer
+extension info.kwarc.mmt.lf.Plugin
+extension info.kwarc.mmt.odk.Plugin
+
+// And start MitM
+mitm warmup
+scscp on 26134 0.0.0.0
